@@ -1,12 +1,15 @@
 Package.describe({
   name: "clarencel:force-ssl-configurable",
   summary: "Require this application to use HTTPS",
-  version: "1.0.12",
+  version: "1.0.13",
   git: "https://github.com/ClarenceL/meteor-force-ssl-configurable.git",
   prodOnly: true
 });
 
 Package.onUse(function (api) {
+
+  api.versionsFrom('METEOR@1.3.5.1');
+
   api.use('webapp', 'server');
   api.use('underscore');
   // make sure we come after livedata, so we load after the sockjs
